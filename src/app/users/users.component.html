@@ -1,0 +1,8 @@
+<p>
+    {{userService.users.length}} users found!
+</p>
+
+<div [routerLink]='["/users/",user.username]' class="main-outer" *ngFor="let user of userService.users">
+    <div><span><img class="img" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/512/user-male-icon.png" /></span><span class="title">{{user.name}}</span></div>
+    <div class="mrgT10"> <span class="info">{{user.email}}</span> <span class="info">{{user.phone}}</span> </div>
+</div>
